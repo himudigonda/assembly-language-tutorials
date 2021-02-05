@@ -15,6 +15,10 @@ org 100h                        ; sode starts from offset 100h
     MOV dl, bl                  ; move the value @bl into @dl
     MOV ah, 2                   ; function to print value @dl
     INT 21h                     ; DOS inturrupt
-                            
+
+    MOV ah, 4ch                 ; funtion to terminate
+    MOV al, 00                  ; reassigning 00 to al
+    int 21h                     ; DOS interrupt
+                           
 
 END                             ; End Program
