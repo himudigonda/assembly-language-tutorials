@@ -14,9 +14,9 @@ org 100h                        ; sode starts from offset 100h
                                 
     MOV dl, bl                  ; move the value @bl into @dl
     MOV ah, 2                   ; function to print
-    INT 21h                     ; DOS Interrupt
+    INT 21h                     ; DOS 
 
-    MOV ah, 2h                  ; function to print the value @dl
+    MOV ah, 4ch                 ; function to print the value @dl
     INT 21h                     ; DOS interrupt
 
                             
