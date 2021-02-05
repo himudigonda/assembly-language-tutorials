@@ -17,7 +17,6 @@ org 100h                        ; sode starts from offset 100h
     INT 21h                     ; DOS inturrupt
 
     MOV ah, 4ch                 ; funtion to terminate
-    MOV al, 00                  ; reassigning 00 to al
     int 21h                     ; DOS interrupt
                            
 
