@@ -16,7 +16,7 @@ org 100h                        ; sode starts from offset 100h
     MOV ah, 2                   ; function to print
     INT 21h                     ; DOS 
 
-    MOV ah, 4ch                 ; function to print the value @dl
+    MOV ah, 4ch                 ; function to exit to system
     INT 21h                     ; DOS interrupt
 
                             
