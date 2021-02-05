@@ -3,8 +3,8 @@
 
 org 100h                        ; sode starts from offset 100h
 .data                           ; data segment
-    alpha   db  48+5            ; initializing alpha to be 5(dec)
-    beta    db  48+3            ; initializing beta to be 3(dec)
+    alpha   db  48+5            ; initializing alpha to be 5
+    beta    db  48+3            ; initializing beta to be 3
      
 .code                           ; code segment
           
@@ -15,6 +15,9 @@ org 100h                        ; sode starts from offset 100h
                                 
     MOV dl, beta                ; move beta into @dl
     MOV ah, 2                   ; function for printing
+    INT 21h                     ; DOS interrupt
+ 
+    MOV ah, 4ch                 ; function to exit to system
     INT 21h                     ; DOS interrupt
     
     
