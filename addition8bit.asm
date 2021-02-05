@@ -7,14 +7,14 @@ org 100h                        ; sode starts from offset 100h
     beta    DB  4    
      
 .code                           ; code segment
-    MOV al, alpha
-    MOV bl, beta
-    ADD bl, al
-    ADD bl, 48
+    MOV al, alpha               ; move value $alpha into @al
+    MOV bl, beta                ; move value $beta into @bl
+    ADD bl, al                  ; add @bl and @al, and store into @bl
+    ADD bl, 48                  ; add 48 to @bl to represent the value in @bl in numerical format
     
-    MOV dl, bl
-    MOV ah, 2
-    INT 21h    
+    MOV dl, bl                  ; move the value @bl into @dl
+    MOV ah, 2                   ; function to print value @dl
+    INT 21h                     ; DOS inturrupt
                             
 
 END                             ; End Program
