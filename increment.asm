@@ -11,7 +11,7 @@ org 100h                        ; sode starts from offset 100h
     MOV ah, 2h                  ; function for printing
     INT 21h                     ; DOS interrupt
      
-    INC dl                      ; increment dl by 1
+    INC dl                      ; increment @dl by 1
     
                                 
     MOV ah, 2h                  ; function for printing 
